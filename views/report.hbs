@@ -1,50 +1,52 @@
 {{#extends "base"}}
     {{#block "content"}}
     <h1> Lost and Found Report Form</h1>
-    <form>
+    <form method="POST">
         <div class="row mb-3">
             <div class="col">
                 <label for="first-name" class="form-label">First Name</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="First name" required>
             </div>
             <div class="col">
                 <label for="last-name" class="form-label">Last Name</label>
-                <input type="text" class="form-control" placeholder="Last name">
+                <input type="text" class="form-control" placeholder="Last name" required>
             </div>
         </div>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
   
         <div class="mb-3">
             <label for="lost-item" class="form-label">Item Lost</label>
-            <input type="text" class="form-control" placeholder="Item that you lost">
+            <textarea type="text" class="form-control" 
+            minlength="3" maxlength="200" placeholder="Item that you lost" required>
+            </textarea>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Where did you loose the item?</label>
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="location" id="taxi" checked>
                 <label class="form-check-label" for="taxi">
                     Taxi
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="location" id="bus">
                 <label class="form-check-label" for="bus">
                     Bus
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="location" id="mrt">
                 <label class="form-check-label" for="mrt">
                     MRT
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="location" id="others">
                 <label class="form-check-label" for="others">
                     Others
@@ -55,7 +57,7 @@
         <div class="mb-3">
             <label class="form-label">Description (choose 3 max)</label>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="bulky">
+                <input type="checkbox" class="form-check-input" id="bulky" onclick="false">
                 <label class="form-check-label" for="bulky">bulky</label>
             </div>
             <div class="form-check">

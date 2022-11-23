@@ -1,0 +1,14 @@
+{{#extends "base"}}
+    {{#block "content"}}
+    <h3>Here is a summary of your report</h3>
+    <p>Name: {{this.firstName}} {{this.lastName}}</p>
+    <p>Contact: {{this.email}}</p>
+    <p>Lost Item: {{this.lostItem}}</p>
+    <p>Location: {{this.location}}</p>
+    <p>Description:
+        {{#each description}}
+            {{this}}
+        {{/each}}
+    </p>
+    {{/block}}
+{{/extends}}

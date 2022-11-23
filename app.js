@@ -17,6 +17,17 @@ app.get('/', (req, res) => {
     res.render('report');
 });
 
+app.post('/', (req, res) => {
+    res.render('summary', {
+        firstName: "Trevor",
+        lastName: "Noah",
+        email: "email@email.com",
+        lostItem: "Umbrella",
+        location: "MRT",
+        description: ["bulky", "expensive"]
+    })
+});
+
 app.listen(PORT, () => {
     console.log("Server started")
 });
